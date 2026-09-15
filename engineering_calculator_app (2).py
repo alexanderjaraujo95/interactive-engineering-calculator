@@ -570,7 +570,7 @@ def phase_identifier_tab():
     with c1:
         T_unit = st.selectbox("Temperature unit", ["Kelvin (K)", "Celsius (°C)"], key="phase_T_unit")
         default_T = 298.15 if T_unit == "Kelvin (K)" else 25.0
-        T_in = st.number_input(f"Temperature ({T_unit})", value=default_T)
+        T_in = st.number_input(f"Temperature ({T_unit})", value=default_T, key="phase_temp_input")
     with c2:
         P_kPa = st.number_input("Pressure (kPa)", value=101.325, min_value=0.0)
 
